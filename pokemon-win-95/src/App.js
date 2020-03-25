@@ -4,6 +4,7 @@ import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { reset, themes, AppBar, Toolbar, TextField, Hourglass } from "react95";
 
 import Menu from "./components/Menu";
+import SearchBox from "./components/SearchBox";
 
 const ResetStyles = createGlobalStyle`
   ${reset}
@@ -17,6 +18,7 @@ function App() {
         <AppBar>
           <Toolbar>
             <Menu />
+            <SearchBox />
           </Toolbar>
         </AppBar>
         <header className="App-header">
