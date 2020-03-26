@@ -37,6 +37,24 @@
   }
 }
 
+.appbar-menu {
+  position: relative;
+}
+
 .search-box {
   margin-left: auto;
+}
+
+.start-list-item {
+  display: flex !important;
+  align-items: center;
+}
+
+.windows-logo {
+  width: 20px;
+}
+
+.list-item-images {
+  width: 22px;
+  margin-right: 0.4rem;
 }
