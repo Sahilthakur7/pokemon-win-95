@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Button, List, ListItem, Divider } from "react95";
+import About from "./About";
 
 const Menu = () => {
   const [showMenu, toggleShowMenu] = useState(false);
+  const [showAbout, toggleShowAbout] = useState(false);
   const sound = true;
 
   return (
@@ -21,7 +23,10 @@ const Menu = () => {
             />
             <span className="list-item-text">Github Repo</span>
           </ListItem>
-          <ListItem className="start-list-item">
+          <ListItem
+            className="start-list-item"
+            onClick={e => toggleShowAbout(!showAbout)}
+          >
             <img
               src={require("../assets/computer.png")}
               className="list-item-images"
@@ -42,6 +47,7 @@ const Menu = () => {
         />
         Pokemon 95
       </Button>
+      {showAbout && <About onHide={toggleShowAbout} />}
     </div>
   );
 };
