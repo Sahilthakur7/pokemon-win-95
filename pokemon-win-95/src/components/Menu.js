@@ -25,7 +25,7 @@ const Menu = () => {
           </ListItem>
           <ListItem
             className="start-list-item"
-            onClick={e => toggleShowAbout(!showAbout)}
+            onClick={(e) => toggleShowAbout(!showAbout)}
           >
             <img
               src={require("../assets/computer.png")}
@@ -39,7 +39,7 @@ const Menu = () => {
           </ListItem>
         </List>
       )}
-      <Button onClick={e => toggleShowMenu(!showMenu)} active={showMenu}>
+      <Button onClick={(e) => toggleShowMenu(!showMenu)} active={showMenu}>
         <img
           src={require("../assets/windowslogo.png")}
           alt="winLogo"
@@ -47,7 +47,7 @@ const Menu = () => {
         />
         Pokemon 95
       </Button>
-      {showAbout && <About onHide={toggleShowAbout} />}
+      {showAbout && <About onHide={() => toggleShowAbout(false)} />}
     </div>
   );
 };

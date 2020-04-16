@@ -1,7 +1,7 @@
 import React from "react";
 import { Window, WindowHeader, WindowContent, Button, Anchor } from "react95";
 
-const About = props => {
+const About = (props) => {
   return (
     <Window
       style={{
@@ -13,23 +13,26 @@ const About = props => {
         top: "50%",
         left: "50%",
         transform: "translate(-50%, -50%)",
-        display: "block"
+        display: "block",
       }}
     >
       <WindowHeader className="flex items-center justify-between">
-        <span>About</span>
+        <span className="pull-left">About</span>
         <Button
-          style={{ marginRight: "-6px", marginTop: "1px" }}
+          style={{ marginRight: "-6px", marginTop: "1px", float: "right" }}
           size={"sm"}
           square
           onClick={props.onHide}
         >
-          <span style={{ fontWeight: "bold", transform: "translateY(-1px)" }}>
+          <span
+            style={{ fontWeight: "bold", transform: "translateY(-1px)" }}
+            onClick={props.onHide}
+          >
             x
           </span>
         </Button>
       </WindowHeader>
-      <WindowContent>
+      <WindowContent className="text-align-l">
         <p className="h1">Poké95</p>
         <p className="mt2">An open source Windows 95 style Pokédex.</p>
         <p className="mt2">
