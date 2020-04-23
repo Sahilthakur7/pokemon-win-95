@@ -1,4 +1,4 @@
-import axios from "axios";
+const axios = require("axios");
 
 const getAllPokemon = async () => {
   try {
@@ -20,4 +20,4 @@ const getAllPokemon = async () => {
 
 getAllPokemon();
 
-export { getAllPokemon };
+module.exports = { getAllPokemon };

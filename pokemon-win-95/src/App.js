@@ -4,6 +4,7 @@ import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { reset, themes, AppBar, Toolbar, TextField, Hourglass } from "react95";
 
 import Menu from "./components/Menu";
+import PokemonList from "./components/PokemonList";
 import SearchBox from "./components/SearchBox";
 
 const ResetStyles = createGlobalStyle`
@@ -22,7 +23,7 @@ function App() {
           </Toolbar>
         </AppBar>
         <header className="App-header">
-          Hello everybody . Welcome to pokemon 95
+          <PokemonList />
         </header>
       </ThemeProvider>
     </div>
